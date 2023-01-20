@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "862295213644",
+    "project_id": "virtual-vortex",
+    "storage_bucket": "virtual-vortex.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862295213644:android:996c163c77254a6a67d6e9",
+        "android_client_info": {
+          "package_name": "com.example.virtual_vortex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "862295213644-l3b50bhluvq6roue6fb7kmdknd0g131i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDinxawuaHEMu3wLH38AmHTg7ZRQTXTWew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "862295213644-l3b50bhluvq6roue6fb7kmdknd0g131i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
