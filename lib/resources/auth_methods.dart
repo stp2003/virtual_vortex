@@ -11,6 +11,9 @@ class AuthMethods {
   //?? getter for user ->
   Stream<User?> get authChanges => _auth.authStateChanges();
 
+  //?? getter for getting the user data ->
+  User get user => _auth.currentUser!;
+
   //?? sign-in with google ->
   Future<bool> signInWithGoogle(BuildContext context) async {
     bool res = false;
@@ -50,5 +53,13 @@ class AuthMethods {
       res = false;
     }
     return res;
+  }
+
+  void signOut() async {
+    try {
+      _auth.signOut();
+    } catch (e) {
+      print(e);
+    }
   }
 }

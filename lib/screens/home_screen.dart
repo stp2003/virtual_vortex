@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:virtual_vortex/screens/history_meeting_screen.dart';
+import 'package:virtual_vortex/screens/meeting_screen.dart';
 
+import '../resources/auth_methods.dart';
 import '../utils/colors.dart';
-import '../widgets/home_page_meeting_button.dart';
+import '../widgets/custom_button.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -19,6 +22,14 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  //?? list of pages to go to different pages from home screen by clicking on bottom nav bar->
+  List<Widget> pages = [
+    MeetingScreen(),
+    const HistoryMeetingScreen(),
+    const Text('Contacts'),
+    CustomButton(text: 'Log Out', onPressed: () => AuthMethods().signOut()),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,52 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
 
       //?? body ->
-      body: Padding(
-        padding: const EdgeInsets.only(top: 15.0),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                HomeMeetingButton(
-                  onPressed: () {},
-                  text: 'New Meet',
-                  icon: Icons.videocam,
-                ),
-                HomeMeetingButton(
-                  onPressed: () {},
-                  text: 'Join Meet',
-                  icon: Icons.add_box_rounded,
-                ),
-                HomeMeetingButton(
-                  onPressed: () {},
-                  text: 'Schedule',
-                  icon: Icons.calendar_today,
-                ),
-                HomeMeetingButton(
-                  onPressed: () {},
-                  text: 'Share Screen',
-                  icon: Icons.arrow_upward_rounded,
-                ),
-              ],
-            ),
-
-            //?? middle screen ->
-            const Expanded(
-              child: Center(
-                child: Text(
-                  'Create/ Join Meetings with just a click..',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17.0,
-                    letterSpacing: 0.8,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+      body: pages[_page],
 
       //?? bottom nav bar ->
       bottomNavigationBar: Padding(
