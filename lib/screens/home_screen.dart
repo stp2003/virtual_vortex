@@ -5,6 +5,7 @@ import 'package:virtual_vortex/screens/meeting_screen.dart';
 import '../resources/auth_methods.dart';
 import '../utils/colors.dart';
 import '../widgets/custom_button.dart';
+import 'contacts_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> pages = [
     MeetingScreen(),
     const HistoryMeetingScreen(),
-    const Text('Contacts'),
+    const ContactScreen(),
     CustomButton(text: 'Log Out', onPressed: () => AuthMethods().signOut()),
   ];
 
