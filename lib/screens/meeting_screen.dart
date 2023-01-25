@@ -31,7 +31,7 @@ class MeetingScreen extends StatelessWidget {
       child: Column(
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               HomeMeetingButton(
                 onPressed: createNewMeeting,
@@ -43,16 +43,17 @@ class MeetingScreen extends StatelessWidget {
                 text: 'Join Meet',
                 icon: Icons.add_box_rounded,
               ),
-              HomeMeetingButton(
-                onPressed: () {},
-                text: 'Schedule',
-                icon: Icons.calendar_today,
-              ),
-              HomeMeetingButton(
-                onPressed: () {},
-                text: 'Share Screen',
-                icon: Icons.arrow_upward_rounded,
-              ),
+              //?? more features for further implementation ->
+//               HomeMeetingButton(
+//                 onPressed: () {},
+//                 text: 'Schedule',
+//                 icon: Icons.calendar_today,
+//               ),
+//               HomeMeetingButton(
+//                 onPressed: () {},
+//                 text: 'Share Screen',
+//                 icon: Icons.arrow_upward_rounded,
+//               ),
             ],
           ),
 
